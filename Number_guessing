@@ -1,0 +1,15 @@
+
+import random as r # random number generation
+
+def guess_number(a):  # function that makes the game
+    generated_number = r.randint(1, a) # generates random number using .randint()
+    number_guessed = 0  
+
+    while generated_number != number_guessed: 
+        number_guessed = int(input(f"Guess a number btwn 1 and {a}: "))
+        if number_guessed < generated_number:
+            print("Try bigger!")
+        elif number_guessed > generated_number:
+            print("Try something smaller")
+
+    print(f"Good job you got the number. Number is {generated_number}")
